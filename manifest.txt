@@ -1,0 +1,6 @@
+{"type":"addon",
+"name":"Example Plugin",
+"url":"",
+"description":"This plugin is a demonstration on how to create a plugin",
+"version":0.1
+}
