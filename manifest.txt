@@ -1,6 +1,8 @@
 {"type":"addon",
 "name":"Example Plugin",
-"url":"",
+"module":"example",
+"url":"https://github.com/natelust/example/archive/master.zip",
 "description":"This plugin is a demonstration on how to create a plugin",
-"version":0.1
+"version":0.1,
+"ntv_version":0.4
 }
