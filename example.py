@@ -84,7 +84,7 @@ class example(QWidget):
         #Conversly we could have set the gray point and contrast and called the
         #create black and white function, but this is more straitforward
         #now we want to update the canvas in the main application
-        self.main.drawim()
+        self.main.update_canvas()
         #we now turn on the square root button
         self.sqrt_button.setEnabled(True)
         #disable the square button just so the user can only toggle back and forth
@@ -106,7 +106,7 @@ class example(QWidget):
         self.main.white = self.main.white**0.5
         self.main.black = self.main.black**0.5
         #update and redraw the canvas
-        self.main.drawim()
+        self.main.update_canvas()
         #set square button back to active and deactivate sqrt, just so you can only
         #toggle back and forth
         self.square_button.setEnabled(True)
