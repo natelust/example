@@ -126,3 +126,25 @@ class example(QWidget):
         #This step says that we accpet the close event and process it.
         #by not accepting some platforms will not close the widget
         event.accept()
+
+    def register_functions(self):
+        #This function is called by the listener thread in the main program. Its purposus
+        #is to register what functions can be called from an embeded session inside an
+        #interpreted language, such as python. This function does not have to be implimented
+        #the listener will only call it if it is present in a plugin, but if you want your
+        #plugin to be used from an interpreted session it must be present.
+        #This function should return 3 lists of strings
+        #the first list should be the name used to identify the function from the interpreter
+        #try to pick somewhat unique and identifying names
+        names = ['square_plugin_square','square_plugin_sqrt']
+        #the next variabel should contain a list of descriptions, letting the user know what
+        #the function does, and if it expects arguments and how to format them. All arguments
+        #will be passed in as a list, so a description would be like args: [var1,var2] where
+        #var one is a float and var2 is a 2d array. The functions in this example take no
+        #arguments
+        descriptions = ['square the image desplayed, expects no arguments',\
+                        'take the square root of the image desplayed, expects no arguments']
+        #finally there should be a list of strings corresponding to the function to be called
+        #in the plugin class
+        functions = ['square_image','sqrt_image']
+        return names,descriptions,functions
