@@ -127,7 +127,10 @@ class example(QWidget):
         #by not accepting some platforms will not close the widget
         event.accept()
 
-    def register_functions(self):
+    def register_functions(self=None):
+        #Note setting defualt value for self, this is very very important, other wise the
+        #function will fail register properly!!!
+
         #This function is called by the listener thread in the main program. Its purposus
         #is to register what functions can be called from an embeded session inside an
         #interpreted language, such as python. This function does not have to be implimented
