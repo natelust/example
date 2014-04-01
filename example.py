@@ -1,6 +1,10 @@
 #lets import the nessisary
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+try:
+    from PySide.QtCore import *
+    from PySide.QtGui import *
+except:
+    from PyQt4.QtCore import *
+    from PyQt4.QtGui import *
 
 import numpy as np
 
