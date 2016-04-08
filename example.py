@@ -13,7 +13,8 @@ from NTV.utils import hasCommands
 #other classes. These could be layouts created with qt designer and pyuic4
 #see other plugins for more details
 # This decorator informs the system that these methods are available to be used
-# From the command line
+# From the command line. These should be methods of your class. Each method to be
+# registered should be listed as strings corresponding to the method name.
 @hasCommands("square_image", "sqrt_image")
 class example(QWidget):
     def __init__(self,main,parent=None):
