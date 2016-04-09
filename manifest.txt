@@ -1,6 +1,6 @@
 {"type":"addon",
 "name":"Example Plugin",
-"persistant":"False",
+"persistent":"False",
 "module":"example",
 "url":"https://github.com/natelust/example/archive/master.zip",
 "description":"This plugin is a demonstration on how to create a plugin",
